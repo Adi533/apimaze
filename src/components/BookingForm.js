@@ -5,15 +5,12 @@ const BookingForm = ({ movieDetails }) => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    // Add more form fields as needed
   });
 
   useEffect(() => {
-    // Populate default values from movieDetails
     setFormData((prevData) => ({
       ...prevData,
       movieName: movieDetails.name,
-      // Add more fields from movieDetails
     }));
   }, [movieDetails]);
 
@@ -27,8 +24,6 @@ const BookingForm = ({ movieDetails }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Implement the logic to handle form submission
-    // You can use local/session storage to store user details
     console.log('Form submitted:', formData);
   };
 
@@ -77,7 +72,6 @@ const BookingForm = ({ movieDetails }) => {
             />
           </div>
         </div>
-        {/* Add more form fields as needed */}
         <div className="form-group mb-3 row">
           <div className="col-sm-10 offset-sm-1">
             <button type="submit" className="btn btn-primary">Submit</button>
